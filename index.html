@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | WDD231 | Adebimpe Aderoju</title>
+    <meta name="description"
+        content="Home page for Adebimpe's WDD231 course demonstrating HTML, CSS, JS skills. Chemical engineering grad pursuing software dev.">
+    <meta name="author" content="Adebimpe">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/course.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <picture>
+            <img src="images/logo.svg" alt="Adebimpe A.M" loading="lazy" width="60" height="60">
+        </picture>
+        <h1>Adebimpe Aderoju M.</h1>
+        <button id="menuBtn" aria-label="Navigation menu">&#9776;</button>
+    </header>
+
+    <nav aria-label="Main navigation">
+        <ul id="primaryNav">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="#">Chamber</a></li>
+            <li><a href="#">Final</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Home</h2>
+
+        <section class="hero">
+            <img src="images/Adebimpe-Headshot.png" alt="Adebimpe A.M, Chemical Engineering Graduate from OAU, Lagos"
+                loading="lazy" width="300" height="400">
+            <div class="hero-text">
+                <h3>About Me</h3>
+                <p>Recent Chemical Engineering graduate from Obafemi Awolowo University (OAU), Nigeria. Aspiring
+                    software engineer via BYU Pathway, specializing in Python, web dev, and ChemEng apps. Based in
+                    Lagos, NG.</p>
+            </div>
+        </section>
+
+        <section class="certificates">
+            <h3>Web Certificate Courses</h3>
+            <div id="coursesContainer">
+                <!-- Courses populated by JS -->
+            </div>
+            <div class="filter-buttons">
+                <button data-filter="all">All Courses</button>
+                <button data-filter="wdd">WDD Courses</button>
+                <button data-filter="cse">CSE Courses</button>
+            </div>
+            <p id="totalCredits">Total Credits: 0</p>
+        </section>
+    </main>
+
+    <footer>
+        <ul>
+            <li>&copy; <span id="currentYear"></span> Adebimpe A.M | Lagos, NG</li>
+            <li><a href="https://github.com/Adebimpe-1" target="_blank" rel="noopener noreferrer">GitHub</a> |
+                <a href="https://linkedin.com/in/aderoju-adebimpe" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </li>
+            <li id="lastModified"></li>
+        </ul>
+    </footer>
+</body>
+
+</html>

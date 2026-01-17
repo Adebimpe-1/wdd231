@@ -1,0 +1,166 @@
+:root {
+    --primary-color: hsl(18, 65%, 32%);
+    --secondary-color: hsl(18, 67%, 46%);;
+    --bg-color: #faf9f8;
+    --text-color: #333;
+    --accent-color: #6b661d;
+    --font-family: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--text-color);
+    background: var(--bg-color);
+    margin: 0;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header picture img {
+    border-radius: 50%;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+#menuBtn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--primary-color);
+    display: block;
+}
+
+nav {
+    background: var(--primary-color);
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+nav a {
+    display: block;
+    padding: 1rem;
+    color: white;
+    transition: background 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+main {
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    text-align: center;
+}
+
+.hero img {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.certificates {
+    margin-top: 2rem;
+}
+
+.certificates h3 {
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.course-card {
+    background: white;
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.course-card:hover {
+    transform: translateY(-2px);
+}
+
+.course-card.completed {
+    background: linear-gradient(135deg, var(--secondary-color), #ffed4a);
+    border-left: 5px solid var(--primary-color);
+}
+
+.tech-list {
+    font-size: 0.9rem;
+    color: var(--accent-color);
+    margin: 0.5rem 0;
+}
+
+.filter-buttons {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.filter-buttons button {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.filter-buttons button:hover,
+.filter-buttons button.active {
+    background: var(--accent-color);
+}
+
+#totalCredits {
+    text-align: center;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-top: 1rem;
+}
+
+footer {
+    background: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+footer ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+footer a {
+    color: var(--bg-color);
+}
