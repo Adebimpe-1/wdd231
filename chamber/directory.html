@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | WDD231 | Adebimpe Aderoju</title>
+    <meta name="description"
+        content="Home page for Adebimpe's WDD231 course demonstrating HTML, CSS, JS skills. Chemical engineering grad pursuing software dev.">
+    <meta name="author" content="Adebimpe A.M">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- facebook og meta -->
+    <meta property="og:title" content="LCCI Member Directory">
+    <meta property="og:description" content="Discover Lagos business community members">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630/0066CC/FFFFFF?text=LCCI+Directory">
+    <meta property="og:url" content="https://github.com/Adebimpe-1/wdd231/chamber/directory.html">
+    <!-- css -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/small.css">
+    <link rel="stylesheet" href="css/large.css">
+    <script src="" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">LCCI</div>
+        <nav>
+            <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html" class="active">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>Member Directory</h1>
+            <p>1,500+ businesses powering Lagos economy</p>
+
+            <div class="view-toggle">
+                <button id="grid-view" class="active">Grid View</button>
+                <button id="list-view">List View</button>
+            </div>
+
+            <!-- members -->
+            <div id="members-container" class="members-grid"></div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="year"></span> Lagos Chamber of Commerce | Lagos, Nigeria</p>
+            <p id="last-modified">Last Modified: Loading...</p>
+            <p>Adebumpe A.M| WDD 231</p>
+        </div>
+    </footer>
+</body>
+
+</html>

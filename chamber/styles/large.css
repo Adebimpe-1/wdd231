@@ -1,0 +1,17 @@
+@media (min-width: 56.25em) {
+    .members-grid {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr))
+    }
+
+    .view-toggle button {
+        flex: none
+    }
+
+    header nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center
+    }
+}

@@ -1,0 +1,142 @@
+header {
+    background: #0066cc;
+    color: white;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold
+}
+
+.nav-menu {
+    display: none;
+    flex-direction: column;
+    background: #0066cc;
+    gap: 1rem;
+    padding: 1rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0
+}
+
+.nav-menu.active {
+    display: flex
+}
+
+.menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer
+}
+
+main {
+    padding: 2rem 1rem
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center
+}
+
+.view-toggle {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin: 2rem 0
+}
+
+.view-toggle button {
+    padding: .75rem 1.5rem;
+    flex: 1;
+    max-width: 150px
+}
+
+.members-grid {
+    display: grid;
+    gap: 1.5rem
+}
+
+.member-card {
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1)
+}
+
+.member-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px
+}
+
+.member-level {
+    padding: .25rem .75rem;
+    border-radius: 20px;
+    font-size: .875rem;
+    font-weight: bold;
+    display: inline-block
+}
+
+.member-1 {
+    background: gold;
+    color: #333
+}
+
+.member-2 {
+    background: silver;
+    color: #333
+}
+
+.member-3 {
+    background: #0066cc;
+    color: white
+}
+
+.member-list {
+    padding: 1rem;
+    border-left: 4px solid #0066cc;
+    background: #f8f9fa
+}
+
+footer {
+    background: #333;
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    gap: 0.5rem
+}
+
+footer p {
+    margin: 0
+}
+
+@media (min-width: 32.5em) {
+    .nav-menu {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        background: transparent;
+        padding: 0;
+        gap: 2rem
+    }
+
+    .menu-toggle {
+        display: none
+    }
+}
