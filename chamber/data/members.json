@@ -4,7 +4,7 @@
         "address": "12 Yaba Tech Close, Yaba, Lagos",
         "phone": "+234 803 456 7890",
         "website": "https://techhub.ng",
-        "image": "images/techhub.jpg",
+        "image": "images/techhub.png",
         "level": 3,
         "sector": "Technology"
     },
@@ -13,7 +13,7 @@
         "address": "5A Ozumba Mbadiwe, Victoria Island",
         "phone": "+234 701 234 5678",
         "website": "https://marinarealty.com",
-        "image": "images/marina.jpg",
+        "image": "images/marinarealty.png",
         "level": 2,
         "sector": "Real Estate"
     },
@@ -22,7 +22,7 @@
         "address": "Ikeja Industrial Estate, Ikeja",
         "phone": "+234 802 345 6789",
         "website": "https://lagostranspo.com",
-        "image": "images/transpo.jpg",
+        "image": "images/lagostranspo.png",
         "level": 1,
         "sector": "Transportation"
     },
@@ -31,7 +31,7 @@
         "address": "Allen Avenue, Ikeja",
         "phone": "+234 809 876 5432",
         "website": "https://foodieplaza.ng",
-        "image": "images/foodie.jpg",
+        "image": "images/foodieplaza.jfif",
         "level": 2,
         "sector": "Hospitality"
     },
@@ -40,7 +40,7 @@
         "address": "Apapa Wharf Road, Apapa",
         "phone": "+234 808 123 4567",
         "website": "https://petrotech.com.ng",
-        "image": "images/petro.jpg",
+        "image": "images/petrotech.png",
         "level": 3,
         "sector": "Energy"
     },
@@ -49,7 +49,7 @@
         "address": "Tejuosho Market, Yaba",
         "phone": "+234 703 987 6543",
         "website": "https://yabahfashion.com",
-        "image": "images/fashion.jpg",
+        "image": "images/yabafashion.jfif",
         "level": 1,
         "sector": "Retail"
     },
@@ -58,7 +58,7 @@
         "address": "Idowu Taylor St, Victoria Island",
         "phone": "+234 1 280 9000",
         "website": "https://islandbank.ng",
-        "image": "images/bank.jpg",
+        "image": "images/islandbank.jfif",
         "level": 3,
         "sector": "Finance"
     },
@@ -67,7 +67,7 @@
         "address": "Oregun, Ikeja",
         "phone": "+234 704 567 8901",
         "website": "https://greenbuild.ng",
-        "image": "images/greenbuild.jpg",
+        "image": "images/greenbuild.png",
         "level": 2,
         "sector": "Construction"
     }
