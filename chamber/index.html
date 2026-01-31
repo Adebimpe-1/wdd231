@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | WDD231 | Adebimpe Aderoju</title>
+    <meta name="description"
+        content="Home page for Adebimpe's WDD231 course demonstrating HTML, CSS, JS skills. Chemical engineering grad pursuing software dev.">
+    <meta name="author" content="Adebimpe A.M">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- facebook og meta -->
+    <meta property="og:title" content="LCCI Member Directory">
+    <meta property="og:description" content="Discover Lagos business community members">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630/0066CC/FFFFFF?text=LCCI+Directory">
+    <meta property="og:url" content="https://github.com/Adebimpe-1/wdd231/blob/main/chamber/directory.html">
+    <!-- css -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <!-- Javascript -->
+    <script src="scripts/directory.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+            <span> 🏛️ LCCI - LAGOS CHAMBER OF COMMERCE</span>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+        
+        <main>
+            <section class="hero">
+                <div class="hero-content">
+                    <h1>Welcome to Lagos Chamber</h1>
+                    <p>Grow your business in Africa's commercial capital</p>
+                    <a href="join.html" class="cta-button">Join Now</a>
+                </div>
+            </section>
+        
+            <div class="container">
+                <section class="events-grid">
+                    <article class="event-card">
+                        <h3>Business Networking Mixer</h3>
+                        <p>Feb 15, 2026 | Eko Hotel</p>
+                        <p>Connect with 200+ business leaders</p>
+                    </article>
+                    <article class="event-card">
+                        <h3>Digital Marketing Summit</h3>
+                        <p>Mar 5, 2026 | Online</p>
+                        <p>Master 2026 marketing strategies</p>
+                    </article>
+                </section>
+        
+                <section class="weather-section">
+                    <h2 style="color: white; margin-bottom: 1.5rem;">🌤️ Lagos Weather</h2>
+                    <div class="weather-container">
+                        <div class="current-weather">
+                            <div class="weather-icon">☀️</div>
+                            <div>
+                                <div class="weather-temp">--°C</div>
+                                <div class="weather-description">Loading...</div>
+                            </div>
+                        </div>
+                        <div class="forecast-grid">
+                            <!-- Populate using JS -->
+                        </div>
+                    </div>
+                </section>
+        
+                <section>
+                    <h2 style="text-align: center; margin-bottom: 2rem;">⭐ Member Spotlights</h2>
+                    <div class="spotlights-grid" id="spotlights-grid">
+                        <!-- Random gold/silver members populated using JS -->
+                    </div>
+                </section>
+            </div>
+        </main>
+</body>
+
+<footer>
+    <div class="container">
+        <p>&copy; <span id="year"></span> Lagos Chamber of Commerce | Lagos, Nigeria</p>
+        <p id="last-modified">Last Modified: Loading...</p>
+        <p>Adebimpe A.M| WDD 231</p>
+    </div>
+</footer>
+</body>
+
+</html>
