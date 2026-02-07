@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | WDD231 | Adebimpe Aderoju</title>
+    <meta name="description"
+        content="Home page for Adebimpe's WDD231 course demonstrating HTML, CSS, JS skills. Chemical engineering grad pursuing software dev.">
+    <meta name="author" content="Adebimpe A.M">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- facebook og meta -->
+    <meta property="og:title" content="LCCI Member Directory">
+    <meta property="og:description" content="Discover Lagos business community members">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630/0066CC/FFFFFF?text=LCCI+Directory">
+    <meta property="og:url" content="https://github.com/Adebimpe-1/wdd231/blob/main/chamber/directory.html">
+    <!-- css -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <!-- Javascript -->
+    <script src="scripts/directory.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <span> 🏛️ LCCI - LAGOS CHAMBER OF COMMERCE</span>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container" style="text-align: center; max-width: 600px; margin: 3rem auto;">
+            <div style="background: white; padding: 3rem; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.1);">
+                <h1 style="color: #0066cc; margin-bottom: 1rem;">🎉 Thank You!</h1>
+                <p style="font-size: 1.2rem; color: #28a745; margin-bottom: 2rem;">
+                    Your membership application has been submitted successfully.
+                </p>
+    
+                <div id="form-data"
+                    style="background: #f8f9fa; padding: 2rem; border-radius: 8px; border-left: 5px solid #0066cc;">
+                    <!-- Form data populated by JS -->
+                </div>
+    
+                <p style="margin-top: 2rem; color: #666;">
+                    We'll review your application and contact you within 48 hours.
+                </p>
+                <a href="index.html"
+                    style="display: inline-block; background: #0066cc; color: white; padding: 1rem 2rem; text-decoration: none; border-radius: 6px; margin-top: 1rem;">←
+                    Back to Home</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="year"></span> Lagos Chamber of Commerce | Lagos, Nigeria</p>
+            <p id="last-modified">Last Modified: Loading...</p>
+            <p>Adebimpe A.M| WDD 231</p>
+        </div>
+    </footer>
+    </body>
+    
+    </html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | WDD231 | Adebimpe Aderoju</title>
+    <meta name="description"
+        content="Home page for Adebimpe's WDD231 course demonstrating HTML, CSS, JS skills. Chemical engineering grad pursuing software dev.">
+    <meta name="author" content="Adebimpe A.M">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- facebook og meta -->
+    <meta property="og:title" content="LCCI Member Directory">
+    <meta property="og:description" content="Discover Lagos business community members">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630/0066CC/FFFFFF?text=LCCI+Directory">
+    <meta property="og:url" content="https://github.com/Adebimpe-1/wdd231/blob/main/chamber/directory.html">
+    <!-- css -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <!-- Javascript -->
+    <script src="scripts/directory.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <span> 🏛️ LCCI - LAGOS CHAMBER OF COMMERCE</span>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+<main>
+    <div class="container">
+        <h1>Join Our Chamber</h1>
+        <p style="text-align: center; color: #666; margin-bottom: 3rem; font-size: 1.1rem;">
+            Become a member and grow your business in Lagos
+        </p>
+
+        <div class="join-layout">
+            <!-- Membership Cards (Left on desktop, Below on mobile) -->
+            <div class="membership-cards" id="membership-cards">
+                <div class="membership-card np-card animate-card" data-modal="np-modal">
+                    <h3>NP Membership</h3>
+                    <p class="price">₦0 / year</p>
+                    <p>For Non-Profits</p>
+                    <button class="info-btn">Learn More</button>
+                </div>
+                <div class="membership-card bronze-card animate-card" data-modal="bronze-modal">
+                    <h3>Bronze</h3>
+                    <p class="price">₦50,000 / year</p>
+                    <p>Basic Benefits</p>
+                    <button class="info-btn">Learn More</button>
+                </div>
+                <div class="membership-card silver-card animate-card" data-modal="silver-modal">
+                    <h3>Silver</h3>
+                    <p class="price">₦100,000 / year</p>
+                    <p>Premium Access</p>
+                    <button class="info-btn">Learn More</button>
+                </div>
+                <div class="membership-card gold-card animate-card" data-modal="gold-modal">
+                    <h3>Gold</h3>
+                    <p class="price">₦200,000 / year</p>
+                    <p>Elite Benefits</p>
+                    <button class="info-btn">Learn More</button>
+                </div>
+            </div>
+
+            <!-- Application Form (Right on desktop, Above on mobile) -->
+            <form class="membership-form" method="GET" action="thankyou.html">
+                <!-- First Name -->
+                <div class="form-group">
+                    <label for="first-name">First Name <span class="required">*</span></label>
+                    <input type="text" id="first-name" name="firstName" title="Enter your first name"
+                        autocomplete="given-name" required>
+                </div>
+
+                <!-- Last Name -->
+                <div class="form-group">
+                    <label for="last-name">Last Name <span class="required">*</span></label>
+                    <input type="text" id="last-name" name="lastName" title="Enter your last name"
+                        autocomplete="family-name" required>
+                </div>
+
+                <!-- Title -->
+                <div class="form-group">
+                    <label for="title">Job Title</label>
+                    <input type="text" id="title" name="title" title="Enter your job title (min 7 characters)"
+                        autocomplete="organization-title" pattern="[A-Za-z\s-]{7,}" maxlength="50">
+                    <small style="color: #666; font-size: 0.85rem;">Min 7 characters (letters, spaces, hyphens
+                        only)</small>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="email">Email Address <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" title="Enter your email address" autocomplete="email"
+                        placeholder="example@company.com" required>
+                </div>
+
+                <!-- Phone -->
+                <div class="form-group">
+                    <label for="phone">Mobile Phone <span class="required">*</span></label>
+                    <input type="tel" id="phone" name="phone" title="Enter your mobile phone number" autocomplete="tel"
+                        required>
+                </div>
+
+                <!-- Business Name -->
+                <div class="form-group">
+                    <label for="business-name">Business Name <span class="required">*</span></label>
+                    <input type="text" id="business-name" name="businessName"
+                        title="Enter your business/organization name" autocomplete="organization" required>
+                </div>
+
+                <!-- Membership Level -->
+                <div class="form-group">
+                    <label for="membership-level">Membership Level <span class="required">*</span></label>
+                    <select id="membership-level" name="membershipLevel" title="Select membership level" required>
+                        <option value="">Choose a level...</option>
+                        <option value="np">NP Membership (Non-Profit - Free)</option>
+                        <option value="bronze">Bronze Membership (₦50,000)</option>
+                        <option value="silver">Silver Membership (₦100,000)</option>
+                        <option value="gold">Gold Membership (₦200,000)</option>
+                    </select>
+                </div>
+
+                <!-- Business Description -->
+                <div class="form-group">
+                    <label for="description">Business Description</label>
+                    <textarea id="description" name="description" title="Describe your business" rows="4"
+                        maxlength="500"
+                        placeholder="Tell us about your business and why you want to join..."></textarea>
+                </div>
+
+                <!-- Hidden Timestamp -->
+                <input type="hidden" id="timestamp" name="timestamp">
+
+                <button type="submit" class="submit-btn">Submit Application</button>
+            </form>
+        </div>
+    </div>
+</main>
+
+<!-- Membership Modals -->
+<div id="np-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>NP Membership Benefits</h2>
+        <ul>
+            <li>Free membership for registered non-profits</li>
+            <li>Directory listing</li>
+            <li>Event invitations</li>
+            <li>Networking opportunities</li>
+        </ul>
+    </div>
+</div>
+
+<div id="bronze-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Bronze Membership (₦50,000)</h2>
+        <ul>
+            <li>Everything in NP +</li>
+            <li>Logo on website</li>
+            <li>10% event discounts</li>
+            <li>Email newsletter</li>
+        </ul>
+    </div>
+</div>
+
+<div id="silver-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Silver Membership (₦100,000)</h2>
+        <ul>
+            <li>Everything in Bronze +</li>
+            <li>Homepage spotlight (monthly)</li>
+            <li>25% event discounts</li>
+            <li>Priority networking</li>
+        </ul>
+    </div>
+</div>
+
+<div id="gold-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Gold Membership (₦200,000)</h2>
+        <ul>
+            <li>Everything in Silver +</li>
+            <li>Homepage spotlight (weekly)</li>
+            <li>50% event discounts</li>
+            <li>Board meeting access</li>
+            <li>Exclusive events</li>
+        </ul>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <p>&copy; <span id="year"></span> Lagos Chamber of Commerce | Lagos, Nigeria</p>
+        <p id="last-modified">Last Modified: Loading...</p>
+        <p>Adebimpe A.M| WDD 231</p>
+    </div>
+</footer>
+</body>
+
+</html>

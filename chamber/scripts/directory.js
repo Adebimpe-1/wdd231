@@ -210,3 +210,32 @@ if (!document.querySelector('#list-view-style')) {
 
 // Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', initPage);
+
+// Display form data from URL parameters
+function displayFormData() {
+    const params = new URLSearchParams(window.location.search);
+    const dataDiv = document.getElementById('form-data');
+
+    const requiredFields = {
+        firstName: 'First Name',
+        lastName: 'Last Name',
+        email: 'Email',
+        phone: 'Phone',
+        businessName: 'Business Name',
+        timestamp: 'Application Date'
+    };
+
+    let html = '<h3 style="margin-bottom: 1.5rem; color: #0066cc;">Application Summary</h3><ul style="text-align: left; max-width: 400px; margin: 0 auto;">';
+
+    Object.keys(requiredFields).forEach(key => {
+        const value = params.get(key);
+        if (value) {
+            html += `<li style="margin-bottom: 0.75rem; padding: 0.5rem; background: white; border-radius: 6px; border-left: 3px solid #0066cc;"><strong>${requiredFields[key]}:</strong> ${decodeURIComponent(value)}</li>`;
+        }
+    });
+
+    html += '</ul>';
+    dataDiv.innerHTML = html;
+}
+
+document.addEventListener('DOMContentLoaded', displayFormData);
