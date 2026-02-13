@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover | WDD231 | Adebimpe Aderoju</title>
+    <meta name="description" content="Discover Lagos attractions and business opportunities - LCCI Member Directory">
+    <meta name="author" content="Adebimpe A.M">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+
+    <!-- JS -->
+    <script src="scripts/discover.js" type="module" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <span> 🏛️ LCCI - LAGOS CHAMBER OF COMMERCE</span>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                    <li><a href="discover.html" class="active">Discover</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="discover-container">
+            <!-- Visit Message -->
+            <div id="visit-message" class="visit-message" role="status" aria-live="polite">
+                Loading visit information...
+            </div>
+
+            <h1>Discover Lagos</h1>
+            <p class="discover-intro">
+                Experience the commercial capital of Africa - where business meets culture
+            </p>
+
+            <!-- Discover Grid -->
+            <div class="discover-grid" id="discover-grid">
+                <!-- Cards populated by JavaScript -->
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer-container">
+        <p>&copy; <span id="year"></span> Lagos Chamber of Commerce</p>
+        <p id="last-modified"></p>
+        <p>Adebimpe A.M | WDD 231</p>
+    </footer>
+</body>
+
+</html>

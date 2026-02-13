@@ -239,3 +239,88 @@ function displayFormData() {
 }
 
 document.addEventListener('DOMContentLoaded', displayFormData);
+
+// DISCOVER PAGE: Visit tracking & grid population
+async function initDiscoverPage() {
+    // Visit tracking with localStorage
+    const lastVisitKey = 'discover-last-visit';
+    const visitMessage = document.getElementById('visit-message');
+
+    if (visitMessage) {
+        const lastVisit = localStorage.getItem(lastVisitKey);
+        const now = Date.now();
+        let message = '';
+
+        if (!lastVisit) {
+            // First visit
+            message = 'Welcome! Let us know if you have any questions.';
+            visitMessage.className = 'visit-message welcome show';
+        } else {
+            const daysDiff = Math.floor((now - parseInt(lastVisit)) / (1000 * 60 * 60 * 24));
+
+            if (daysDiff === 0) {
+                message = 'Back so soon! Awesome!';
+                visitMessage.className = 'visit-message recent show';
+            } else {
+                message = `You last visited ${daysDiff} ${daysDiff === 1 ? 'day' : 'days'} ago.`;
+                visitMessage.className = 'visit-message days show';
+            }
+        }
+
+        visitMessage.textContent = message;
+        localStorage.setItem(lastVisitKey, now.toString());
+    }
+
+    // Load discover data
+    const grid = document.getElementById('discover-grid');
+    if (!grid) return;
+
+    try {
+        const { discoverItems } = await import('./data/discover.mjs');
+
+        grid.innerHTML = discoverItems.map((item, index) => `
+            <article class="discover-card card-${index + 1}">
+                <img src="images/${item.image}" 
+                     alt="${item.name}" 
+                     class="card-image" 
+                     loading="lazy" 
+                     width="300" 
+                     height="200">
+                <div class="card-content">
+                    <h2 class="card-title">${item.name}</h2>
+                    <address class="card-address">${item.address}</address>
+                    <p class="card-description">${item.description}</p>
+                    <button class="learn-more-btn">Learn More</button>
+                </div>
+            </article>
+        `).join('');
+    } catch (error) {
+        console.error('Error loading discover data:', error);
+        grid.innerHTML = '<p style="grid-column: 1/-1; text-align: center; padding: 2rem;">Loading attractions...</p>';
+    }
+}
+
+// Update MASTER INITIALIZER
+function initPage() {
+    updateFooter();
+    initMobileMenu();
+    initViewToggle();
+
+    // Page-specific features
+    if (document.querySelector('.hero')) {
+        loadWeather();
+        loadSpotlights();
+    }
+
+    if (document.getElementById('members-container')) {
+        loadDirectoryMembers();
+    }
+
+    if (document.querySelector('.membership-form')) {
+        initJoinPage();
+    }
+
+    if (document.getElementById('discover-grid')) {
+        initDiscoverPage();
+    }
+}
