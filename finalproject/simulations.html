@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Chemical Engineering Simulations Hub - Interactive learning platform for unit operations and process simulations.">
+    <meta name="author" content="Adebimpe A.M.">
+    <title>Chemical Engineering Simulations Hub</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="scripts/base.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="ChemSim Hub Logo" class="logo-img">
+            <h1><span>Chem</span>Sim Hub</h1>
+        </div>
+        <nav class="primary-nav">
+            <ul>
+                <li><a href="index.html"> Home</a></li>
+                <li><a href="simulations.html"> Simulations</a></li>
+                <li><a href="index.html#calculator"> Calculator</a></li>
+                <li><a href="form-results.html"> Results</a></li>
+                <li><a href="attributions.html"> Attributions</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Chemical Engineering Simulations</h1>
+            <p>Interactive process simulations for ChemEng students</p>
+        </section>
+
+        <!-- SEARCH -->
+        <div class="controls fade-in">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search simulations...">
+                <select id="typeFilter">
+                    <option value="">All Types</option>
+                    <option value="distillation">Distillation</option>
+                    <option value="reactor">Reactor</option>
+                    <option value="heat-exchange">Heat Exchange</option>
+                    <option value="separation">Separation</option>
+                </select>
+                <button id="clearFilter" class="btn-primary">Clear</button>
+            </div>
+        </div>
+
+        <!-- SIMULATIONS GRID - POPULATED BY JS -->
+        <div id="simGrid" class="card-grid">
+            <!-- 15 cards should appear here -->
+            <div class="loading">Loading simulations...</div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© <span id="currentyear"></span> ChemSim Hub</p>
+        <a href="https://youtu.be/98Up7ElLII0" target="_final-assignnment-video">Video Demo (2min)</a>
+        <p>Last Modified: <span id="lastmod"></span></p>
+    </footer>
+
+    <script src="scripts/base.js"></script>
+    <script type="module">
+        // ✅ HARDCODED DATA JUST IN CASE
+        const simulations = [
+            { id: 1, name: "Distillation Column A1", type: "distillation", efficiency: 92.5 },
+            { id: 2, name: "CSTR Reactor R-101", type: "reactor", efficiency: 87.2 },
+            { id: 3, name: "Shell & Tube HX E-201", type: "heat-exchange", efficiency: 94.1 },
+            { id: 4, name: "Flash Drum F-1301", type: "separation", efficiency: 89.8 },
+            { id: 5, name: "PFR Reactor R-202", type: "reactor", efficiency: 91.3 },
+            { id: 6, name: "Plate HX E-301", type: "heat-exchange", efficiency: 93.7 },
+            { id: 7, name: "Absorption Tower T-401", type: "absorption", efficiency: 88.6 },
+            { id: 8, name: "Compressor K-501", type: "compression", efficiency: 95.2 },
+            { id: 9, name: "Pump P-601", type: "pumping", efficiency: 97.1 },
+            { id: 10, name: "Tray Column T-701", type: "distillation", efficiency: 90.4 },
+            { id: 11, name: "Packed Tower T-801", type: "absorption", efficiency: 86.9 },
+            { id: 12, name: "Cooler E-901", type: "heat-exchange", efficiency: 92.8 },
+            { id: 13, name: "Mixing Tank V-1001", type: "mixing", efficiency: 94.5 },
+            { id: 14, name: "Filter F-1101", type: "filtration", efficiency: 89.2 },
+            { id: 15, name: "Dryer D-1201", type: "drying", efficiency: 91.7 }
+        ];
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const simGrid = document.getElementById('simGrid');
+            const searchInput = document.getElementById('searchInput');
+            const typeFilter = document.getElementById('typeFilter');
+            const clearBtn = document.getElementById('clearFilter');
+
+            displaySims(simulations);
+            console.log('✅ 15 simulations displayed');
+
+            // 🔍 SEARCH
+            function filterSims() {
+                const term = searchInput.value.toLowerCase();
+                const type = typeFilter.value;
+                const filtered = simulations.filter(sim =>
+                    sim.name.toLowerCase().includes(term) &&
+                    (!type || sim.type === type)
+                );
+                displaySims(filtered);
+            }
+
+            // 🖼️ DISPLAY FUNCTION
+            function displaySims(sims) {
+                simGrid.innerHTML = sims.length
+                    ? sims.map(sim => `
+                        <article class="sim-card fade-in">
+                            <div class="sim-icon">⚗️</div>
+                            <div class="card-body">
+                                <h3>${sim.name}</h3>
+                                <p class="type">${sim.type.replace('-', ' ').toUpperCase()}</p>
+                                <div class="stats">
+                                    <span class="efficiency">${sim.efficiency}%</span>
+                                </div>
+                            </div>
+                        </article>
+                    `).join('')
+                    : '<p class="no-results">No simulations match your search</p>';
+            }
+
+            // 🎯 EVENT LISTENERS
+            if (searchInput) searchInput.addEventListener('input', filterSims);
+            if (typeFilter) typeFilter.addEventListener('change', filterSims);
+            if (clearBtn) clearBtn.addEventListener('click', () => {
+                searchInput.value = ''; typeFilter.value = ''; displaySims(simulations);
+            });
+        });
+    </script>
+
+</body>
+
+</html>

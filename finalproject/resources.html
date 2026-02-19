@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Chemical engineering resources, tutorials, and custom simulation calculator.">
+    <meta name="author" content="Your Name">
+    <title>Resources - Chemical Engineering Simulations Hub</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="scripts/base.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="ChemSim Hub Logo" class="logo-img">
+            <h1><span>Chem</span>Sim Hub</h1>
+        </div>
+        <nav class="primary-nav">
+            <ul>
+                <li><a href="index.html"> Home</a></li>
+                <li><a href="simulations.html"> Simulations</a></li>
+                <li><a href="index.html#calculator"> Calculator</a></li>
+                <li><a href="form-results.html"> Results</a></li>
+                <li><a href="attributions.html"> Attributions</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="calculator">
+            <h1>Process Parameter Calculator</h1>
+            <form id="calcForm">
+                <div class="form-group">
+                    <label for="processType">Process Type:</label>
+                    <select id="processType" required>
+                        <option value="">Select process</option>
+                        <option value="distillation">Distillation Column</option>
+                        <option value="heat-exchanger">Heat Exchanger</option>
+                        <option value="reactor">Continuous Reactor</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="flowRate">Feed Flow Rate (kg/hr):</label>
+                    <input type="number" id="flowRate" min="100" max="10000" required>
+                </div>
+                <div class="form-group">
+                    <label for="tempIn">Inlet Temp (°C):</label>
+                    <input type="number" id="tempIn" min="0" max="500" required>
+                </div>
+                <div class="form-group">
+                    <label for="tempOut">Outlet Temp (°C):</label>
+                    <input type="number" id="tempOut" min="0" max="500" required>
+                </div>
+                <button type="submit">Calculate Results</button>
+            </form>
+        </section>
+
+        <section class="tutorials">
+            <h2>Quick Tutorials</h2>
+            <ul>
+                <li>Distillation Column Design Basics</li>
+                <li>Heat Exchanger Sizing Methods</li>
+                <li>Reactor Kinetics Fundamentals</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 ChemSim Hub | <a href="attributions.html">Attributions</a> |
+            <a href="https://youtu.be/98Up7ElLII0" target="_final-assignnment-video">Video Demo (2min)</a>
+        </p>
+    </footer>
+
+    <script type="module">
+        import { initNav, initStorage } from './scripts/ui.js';
+        initNav();
+        initStorage();
+        document.getElementById('calcForm').addEventListener('submit', handleFormSubmit);
+
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+            const params = new URLSearchParams(formData);
+            window.location.href = `form-results.html?${params.toString()}`;
+        }
+    </script>
+</body>
+
+</html>

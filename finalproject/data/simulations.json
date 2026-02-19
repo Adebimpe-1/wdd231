@@ -1,0 +1,189 @@
+[
+    {
+        "id": 1,
+        "name": "Distillation Column A1",
+        "type": "distillation",
+        "efficiency": 92.5,
+        "flowIn": 1250,
+        "flowOut": 1180,
+        "safety": "High",
+        "temp": 145,
+        "pressure": 2.1
+    },
+    {
+        "id": 2,
+        "name": "CSTR Reactor B2",
+        "type": "reactor",
+        "efficiency": 87.3,
+        "flowIn": 800,
+        "flowOut": 720,
+        "safety": "Medium",
+        "temp": 220,
+        "pressure": 3.5
+    },
+    {
+        "id": 1,
+        "name": "Distillation Column A1",
+        "type": "distillation",
+        "efficiency": 92.5,
+        "flowIn": 1250,
+        "flowOut": 1180,
+        "safety": "High",
+        "temp": 145,
+        "pressure": 2.1
+    },
+    {
+        "id": 2,
+        "name": "CSTR Reactor B2",
+        "type": "reactor",
+        "efficiency": 87.3,
+        "flowIn": 800,
+        "flowOut": 720,
+        "safety": "Medium",
+        "temp": 220,
+        "pressure": 3.5
+    },
+    {
+        "id": 3,
+        "name": "Shell & Tube HX-101",
+        "type": "heat",
+        "efficiency": 89.2,
+        "flowIn": 2000,
+        "flowOut": 1850,
+        "safety": "High",
+        "temp": 180,
+        "pressure": 4.2
+    },
+    {
+        "id": 4,
+        "name": "Batch Reactor R-201",
+        "type": "reactor",
+        "efficiency": 78.9,
+        "flowIn": 500,
+        "flowOut": 450,
+        "safety": "Medium",
+        "temp": 160,
+        "pressure": 1.8
+    },
+    {
+        "id": 5,
+        "name": "Absorption Tower T-301",
+        "type": "absorption",
+        "efficiency": 94.1,
+        "flowIn": 950,
+        "flowOut": 890,
+        "safety": "High",
+        "temp": 35,
+        "pressure": 1.2
+    },
+    {
+        "id": 6,
+        "name": "Evaporator E-401",
+        "type": "evaporation",
+        "efficiency": 91.7,
+        "flowIn": 3000,
+        "flowOut": 2100,
+        "safety": "High",
+        "temp": 120,
+        "pressure": 2.8
+    },
+    {
+        "id": 7,
+        "name": "PFR Reactor R-501",
+        "type": "reactor",
+        "efficiency": 88.6,
+        "flowIn": 1200,
+        "flowOut": 1080,
+        "safety": "Medium",
+        "temp": 250,
+        "pressure": 5.1
+    },
+    {
+        "id": 8,
+        "name": "Plate Heat Exchanger HX-601",
+        "type": "heat",
+        "efficiency": 93.4,
+        "flowIn": 1500,
+        "flowOut": 1420,
+        "safety": "High",
+        "temp": 95,
+        "pressure": 3.0
+    },
+    {
+        "id": 9,
+        "name": "Gas Absorber G-701",
+        "type": "absorption",
+        "efficiency": 96.2,
+        "flowIn": 600,
+        "flowOut": 550,
+        "safety": "High",
+        "temp": 28,
+        "pressure": 1.5
+    },
+    {
+        "id": 10,
+        "name": "Crystallizer C-801",
+        "type": "crystallization",
+        "efficiency": 85.3,
+        "flowIn": 750,
+        "flowOut": 680,
+        "safety": "Medium",
+        "temp": 65,
+        "pressure": 1.0
+    },
+    {
+        "id": 11,
+        "name": "Liquid Extractor L-901",
+        "type": "extraction",
+        "efficiency": 90.8,
+        "flowIn": 1100,
+        "flowOut": 1020,
+        "safety": "High",
+        "temp": 40,
+        "pressure": 1.3
+    },
+    {
+        "id": 12,
+        "name": "Dryer D-1001",
+        "type": "drying",
+        "efficiency": 97.5,
+        "flowIn": 400,
+        "flowOut": 360,
+        "safety": "High",
+        "temp": 80,
+        "pressure": 0.9
+    },
+    {
+        "id": 13,
+        "name": "Packed Bed Reactor R-1101",
+        "type": "reactor",
+        "efficiency": 82.1,
+        "flowIn": 900,
+        "flowOut": 810,
+        "safety": "Medium",
+        "temp": 300,
+        "pressure": 6.2
+    },
+    {
+        "id": 14,
+        "name": "Membrane Separator M-1201",
+        "type": "membrane",
+        "efficiency": 88.9,
+        "flowIn": 1600,
+        "flowOut": 1480,
+        "safety": "High",
+        "temp": 55,
+        "pressure": 2.5
+    },
+    {
+        "id": 15,
+        "name": "Flash Drum F-1301",
+        "type": "flashing",
+        "efficiency": 89.6,
+        "flowIn": 2200,
+        "flowOut": 1980,
+        "safety": "High",
+        "temp": 110,
+        "pressure": 1.9
+    }
+]

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Chemical Engineering Simulations Hub - Interactive learning platform for unit operations and process simulations.">
+    <meta name="author" content="Adebimpe A.M.">
+    <title>Chemical Engineering Simulations Hub</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="scripts/base.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="ChemSim Hub Logo" class="logo-img">
+            <h1><span>Chem</span>Sim Hub</h1>
+        </div>
+        <nav class="primary-nav">
+            <ul>
+                <li><a href="index.html"> Home</a></li>
+                <li><a href="simulations.html"> Simulations</a></li>
+                <li><a href="index.html#calculator"> Calculator</a></li>
+                <li><a href="form-results.html"> Results</a></li>
+                <li><a href="attributions.html"> Attributions</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Interactive Chemical Engineering Simulations</h1>
+            <p>Explore 20+ unit operations with real-time data visualization and custom parameter testing.</p>
+            <div class="stats" id="stats"></div>
+            <a href="simulations.html" class="cta">Start Exploring</a>
+        </section>
+
+        <section class="features">
+            <h2>Key Features</h2>
+            <div class="feature-grid">
+                <div class="feature">
+                    <h3>20+ Simulations</h3>
+                    <p>Distillation, reactors, heat exchangers with real efficiency data.</p>
+                </div>
+                <div class="feature">
+                    <h3>Custom Calculator</h3>
+                    <p>Test your own process parameters and see results instantly.</p>
+                </div>
+                <div class="feature">
+                    <h3>Save Favorites</h3>
+                    <p>Bookmark simulations for quick reference with local storage.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CALCULATOR SECTION -->
+        <section id="calculator" class="calculator fade-in">
+            <h2>Process Efficiency Calculator</h2>
+            <form id="efficiencyForm">
+                <div class="form-group">
+                    <label for="process">Process Type:</label>
+                    <select id="process" required>
+                        <option value="">Select Process</option>
+                        <option value="Distillation">Distillation</option>
+                        <option value="Reactor">Reactor</option>
+                        <option value="Heat Exchange">Heat Exchange</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="feedRate">Feed Rate (kg/h):</label>
+                    <input type="number" id="feedRate" min="1" step="0.1" required>
+                </div>
+                <div class="form-group">
+                    <label for="recovery">Recovery (%):</label>
+                    <input type="number" id="recovery" min="0" max="100" step="0.1" required>
+                </div>
+                <button type="submit" class="btn-primary">Calculate Efficiency</button>
+            </form>
+            <div id="calcResults" class="results" style="display: none;"></div>
+            <a href="form-results.html" class="btn-primary">View Saved Results</a>
+        </section>
+        
+        <script type="module">
+            import { initModals } from './scripts/modal.js';
+            import { saveCalculation, displayStoredResults } from './scripts/storage.js';
+            import { handleCalcForm } from './scripts/form.js';
+
+            initModals();
+            handleCalcForm();
+        </script>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 ChemSim Hub | <a href="attributions.html">Attributions</a> |
+            <a href="https://youtu.be/98Up7ElLII0" target="_final-assignnment-video">Video Demo (2min)</a>
+        </p>
+    </footer>
+
+    <script type="module">
+        import { loadStats } from './scripts/data.js';
+        import { initNav, initStorage } from './scripts/ui.js';
+
+        initNav();
+        initStorage();
+        loadStats();
+    </script>
+</body>
+<!-- This is an html comment -->
+</html>
